@@ -29,6 +29,9 @@ class Cell:
         self._y2 = y2
 
     def draw(self):
+        if not self._win:
+            return
+        
         color_top = "black" if self.has_top_wall else "#d9d9d9"
         color_bottom = "black" if self.has_bottom_wall else "#d9d9d9"
         color_left = "black" if self.has_left_wall else "#d9d9d9"
